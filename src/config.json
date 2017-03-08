@@ -1,0 +1,14 @@
+{
+	"hero1": {
+		"cn_name": "钢铁侠",
+		"en_name": "iron-man"
+	},
+	"hero2": {
+		"cn_name": "美国队长",
+		"en_name": "captain-america"
+	},
+	"hero3": {
+		"cn_name": "绿巨人",
+		"en_name": "the-hulk"
+	}
+}
