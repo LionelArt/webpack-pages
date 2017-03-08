@@ -15,9 +15,6 @@ const extractSass = new ExtractTextPlugin({
 	disable: process.env.npm_lifecycle_event === 'development'
 });
 
-console.log(process.env.npm_lifecycle_event);
-console.log(process.env.NODE_ENV);
-
 // 提取入口文件、公共模块、模板文件
 let getEntry = (plugins) => {
 	let pagePath = path.resolve(PATHS.src, 'page'),
