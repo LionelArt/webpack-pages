@@ -4,9 +4,10 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BabiliPlugin = require("babili-webpack-plugin");
 
 // 通用路径
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.NODE_ENV;
 const PATHS = {
 	src: path.join(__dirname, 'src'),
 	public: path.join(__dirname, 'public')
@@ -134,6 +135,10 @@ if(TARGET === 'dev') {
 }
 
 // 现网环境
-if(TARGET==='build' || TARGET==='production') {
-	module.exports = merge(common, {});
+if(TARGET === 'production') {
+	module.exports = merge(common, {
+		plugins: [
+			new BabiliPlugin()
+		]
+	});
 }
