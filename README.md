@@ -3,7 +3,9 @@
 
 ### Plugins
 + [webpack.optimize.CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/#components/sidebar/sidebar.jsx)
+
 > CommonsChunkPlugin用于提取代码中的公共模块，然后将公共模块打包为一个独立文件。
+
 ```javascript
 new webpack.optimize.CommonsChunkPlugin({
     name: 'vendors',
