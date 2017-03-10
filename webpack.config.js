@@ -15,7 +15,7 @@ const PATHS = {
 // Sass提取配置
 const extractSass = new ExtractTextPlugin({
 	filename: 'css/[name].[contenthash:16].css',
-	disable: TARGET === 'dev'
+	disable: TARGET === 'development'
 });
 
 // 提取入口文件、公共模块、模板文件
@@ -114,7 +114,7 @@ let common = {
 }
 
 // 开发环境
-if(TARGET === 'dev') {
+if(TARGET === 'development') {
 	module.exports = merge(common, {
 		// webpack-dev-server是一个轻量的node.js express服务器
 		// webpack-dev-server的作用是用来伺服资源文件，不能替代后端服务器
