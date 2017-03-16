@@ -86,11 +86,16 @@ let common = {
 				loader: 'json-loader'
 			}]
 		}, {
+			test: /\.(js)$/,
+			use: [{
+				loader: 'babel-loader?cacheDirectory'
+			}]
+		}, {
 			test: /\.(png|jpg|gif)$/,
 			use: [{
 				loader: 'url-loader?limit=8192&name=img/[name].[ext]?[hash:16]'
 			}]
-		},{
+		}, {
 			test: /\.css$/,
 			use: [{
 				loader: 'style-loader' // Creates style nodes from JS scripts
@@ -110,7 +115,7 @@ let common = {
 		}]
 	},
 
-	plugins: plugins,
+	plugins: plugins
 }
 
 // 开发环境
